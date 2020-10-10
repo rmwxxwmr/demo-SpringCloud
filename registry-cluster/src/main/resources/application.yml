@@ -1,0 +1,7 @@
+spring:
+    security:
+        user:
+            name: sa
+            password: 1
+    application:
+        name: registry
