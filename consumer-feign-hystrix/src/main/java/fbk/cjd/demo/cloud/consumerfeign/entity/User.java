@@ -17,4 +17,6 @@ public class User {
 
     private String port;
 
+    private String errorMsg;
+
 }

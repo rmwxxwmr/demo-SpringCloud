@@ -9,4 +9,6 @@ eureka:
             defaultZone: http://sa:1@registry1:8001/eureka/,http://sa:1@registry2:8002/eureka/,http://sa:1@registry3:8003/eureka/
         fetch-registry: true
         register-with-eureka: false
-
+feign:
+    hystrix:
+        enabled: true
