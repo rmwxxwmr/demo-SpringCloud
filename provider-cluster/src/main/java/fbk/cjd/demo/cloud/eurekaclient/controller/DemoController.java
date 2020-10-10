@@ -1,9 +1,8 @@
 package fbk.cjd.demo.cloud.eurekaclient.controller;
 
+import fbk.cjd.demo.cloud.eurekaclient.entity.User;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @author chenjd
@@ -19,6 +18,16 @@ public class DemoController {
     @GetMapping("/restRibbon")
     public String restRibbon(){
         return "restRibbon:"+port;
+    }
+
+    @GetMapping("/feign/{userId}")
+    @ResponseBody
+    public User feign(@PathVariable Integer userId, String userName){
+        User user = new User();
+        user.setPort(port);
+        user.setUserId(userId);
+        user.setUserName(userName);
+        return user;
     }
 
 }

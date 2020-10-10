@@ -1,8 +1,8 @@
 package fbk.cjd.demo.cloud.consumerfeign.controller;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import fbk.cjd.demo.cloud.consumerfeign.entity.User;
+import fbk.cjd.demo.cloud.consumerfeign.feign.DemoFeignClients;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @author chenjd
@@ -12,9 +12,16 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping
 public class FeignController {
 
-    @GetMapping
-    public String test(){
-        return "";
+    private final DemoFeignClients demoFeignClients;
+
+    public FeignController(DemoFeignClients demoFeignClients) {
+        this.demoFeignClients = demoFeignClients;
+    }
+
+    @GetMapping("{userId}")
+    @ResponseBody
+    public User test(@PathVariable Integer userId, String userName){
+        return demoFeignClients.test(userId, userName);
     }
 
 }
