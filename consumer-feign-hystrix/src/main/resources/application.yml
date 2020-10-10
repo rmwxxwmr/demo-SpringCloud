@@ -2,7 +2,7 @@ server:
     port: 8301
 spring:
     application:
-        name: consumer-feign
+        name: consumer-feign-hystrix
 eureka:
     client:
         service-url:
