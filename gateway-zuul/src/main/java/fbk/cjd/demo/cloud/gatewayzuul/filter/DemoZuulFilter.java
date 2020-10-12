@@ -1,10 +1,7 @@
 package fbk.cjd.demo.cloud.gatewayzuul.filter;
 
 import com.netflix.zuul.ZuulFilter;
-import com.netflix.zuul.context.RequestContext;
 import org.springframework.stereotype.Component;
-
-import javax.servlet.http.HttpServletRequest;
 
 /**
  * @author chenjd

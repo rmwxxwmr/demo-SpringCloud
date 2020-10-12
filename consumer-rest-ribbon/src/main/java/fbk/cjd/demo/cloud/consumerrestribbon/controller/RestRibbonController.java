@@ -22,7 +22,7 @@ public class RestRibbonController {
 
     @GetMapping
     public String test(){
-        ResponseEntity<String> entity = restTemplate.getForEntity("http://provider/test/restRibbon", String.class);
+        ResponseEntity<String> entity = restTemplate.getForEntity("http://provider-cluster/test/restRibbon", String.class);
         return entity.getBody();
     }
 

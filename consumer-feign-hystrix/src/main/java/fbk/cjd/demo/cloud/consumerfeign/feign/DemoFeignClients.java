@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * @author chenjd
  * @date 2020/10/10 13:53
  */
-@FeignClient(value = "provider",fallbackFactory = DemoFallbackFactory.class)
+@FeignClient(value = "provider-cluster",fallbackFactory = DemoFallbackFactory.class)
 public interface DemoFeignClients {
 
     @GetMapping("/test/feign/{userId}")
