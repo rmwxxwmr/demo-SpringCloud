@@ -1,0 +1,15 @@
+spring:
+    cloud:
+        config:
+            label: master
+            profile: dev
+#            uri: http://localhost:8501/
+            discovery:
+                enabled: true
+                service-id: config-server
+eureka:
+    client:
+        register-with-eureka: true
+        fetch-registry: true
+        service-url:
+            defaultZone: http://sa:1@registry1:8001/eureka/,http://sa:1@registry2:8002/eureka/,http://sa:1@registry3:8003/eureka/
