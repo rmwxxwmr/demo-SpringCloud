@@ -2,4 +2,4 @@ server:
     port: 8601
 spring:
     application:
-        name: config-client
+        name: config-client-bus

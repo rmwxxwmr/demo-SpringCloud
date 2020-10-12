@@ -2,7 +2,7 @@ server:
     port: 8501
 spring:
     application:
-        name: config-server
+        name: config-server-bus
     cloud:
         config:
             server:

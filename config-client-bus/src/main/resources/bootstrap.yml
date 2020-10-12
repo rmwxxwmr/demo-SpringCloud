@@ -6,7 +6,7 @@ spring:
 #            uri: http://localhost:8501/
             discovery:
                 enabled: true
-                service-id: config-server
+                service-id: config-server-bus
 eureka:
     client:
         register-with-eureka: true
