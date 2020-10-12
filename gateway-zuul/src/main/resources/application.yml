@@ -1,0 +1,19 @@
+server:
+    port: 8401
+spring:
+    application:
+        name: gateway-zuul
+eureka:
+    client:
+        fetch-registry: true
+        register-with-eureka: true
+        service-url:
+            defaultZone: http://sa:1@registry1:8001/eureka/,http://sa:1@registry2:8002/eureka/,http://sa:1@registry3:8003/eureka/
+zuul:
+    routes:
+        api-consumer-feign-hystrix:
+            path: /api-consumer-feign-hystrix/**
+            serviceId: consumer-feign-hystrix
+        api-consumer-rest-ribbon:
+            path: /api-consumer-rest-ribbon/**
+            serviceId: consumer-rest-ribbon

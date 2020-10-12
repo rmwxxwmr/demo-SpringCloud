@@ -14,6 +14,7 @@
         <module>registry-cluster</module>
         <module>consumer-rest-ribbon</module>
         <module>consumer-feign-hystrix</module>
+        <module>gateway-zuul</module>
     </modules>
 
 </project>

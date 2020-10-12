@@ -4,4 +4,4 @@ spring:
             name: sa
             password: 1
     application:
-        name: registry
+        name: registry-cluster
