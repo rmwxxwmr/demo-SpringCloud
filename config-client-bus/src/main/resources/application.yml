@@ -3,3 +3,8 @@ server:
 spring:
     application:
         name: config-client-bus
+    rabbitmq:
+        host: 10.1.0.1
+        port: 5672
+        username: admin
+        password: 123456

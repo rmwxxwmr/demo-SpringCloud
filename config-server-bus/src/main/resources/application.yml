@@ -11,9 +11,19 @@ spring:
                     username:
                     password:
                     search-paths: respo
+    rabbitmq:
+        host: 10.1.0.1
+        port: 5672
+        username: admin
+        password: 123456
 eureka:
     client:
         register-with-eureka: true
         fetch-registry: true
         service-url:
             defaultZone: http://sa:1@registry1:8001/eureka/,http://sa:1@registry2:8002/eureka/,http://sa:1@registry3:8003/eureka/
+management:
+    endpoints:
+        web:
+            exposure:
+                include: "*"

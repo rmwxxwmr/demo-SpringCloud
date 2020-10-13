@@ -15,7 +15,7 @@
         <module>consumer-rest-ribbon</module>
         <module>consumer-feign-hystrix</module>
         <module>gateway-zuul</module>
-        <module>config-server</module>
+        <module>config-server-bus</module>
         <module>config-client-bus</module>
     </modules>
 
