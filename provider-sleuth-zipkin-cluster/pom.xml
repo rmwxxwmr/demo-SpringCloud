@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>fbk.cjd.demo.cloud</groupId>
-	<artifactId>eureka-client-cluster</artifactId>
+	<artifactId>provider-sleuth-zipkin-cluster</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>eureka-client-cluster</name>
+	<name>provider-sleuth-zipkin-cluster</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>

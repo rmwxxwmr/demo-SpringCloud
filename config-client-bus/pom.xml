@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>fbk.cjd.demo.cloud</groupId>
-	<artifactId>config-client</artifactId>
+	<artifactId>config-client-bus</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>config-client</name>
+	<name>config-client-bus</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>

@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>fbk.cjd.demo.cloud</groupId>
-	<artifactId>consumer-feign</artifactId>
+	<artifactId>consumer-feign-hystrix-zipkin</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>consumer-feign</name>
+	<name>consumer-feign-hystrix-zipkin</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>

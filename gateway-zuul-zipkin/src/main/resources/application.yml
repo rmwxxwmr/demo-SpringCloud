@@ -3,6 +3,8 @@ server:
 spring:
     application:
         name: gateway-zuul
+    zipkin:
+        base-url: http://self:9411/
 eureka:
     client:
         fetch-registry: true

@@ -14,9 +14,10 @@
         <module>registry-cluster</module>
         <module>consumer-rest-ribbon</module>
         <module>consumer-feign-hystrix-zipkin</module>
-        <module>gateway-zuul</module>
+        <module>gateway-zuul-zipkin</module>
         <module>config-server-bus</module>
         <module>config-client-bus</module>
+        <module>zipkin-server</module>
     </modules>
 
 </project>

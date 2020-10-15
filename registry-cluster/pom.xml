@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>fbk.cjd.demo.cloud</groupId>
-	<artifactId>eureka-server-cluster</artifactId>
+	<artifactId>registry-cluster</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>eureka-server-cluster</name>
+	<name>registry-cluster</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>

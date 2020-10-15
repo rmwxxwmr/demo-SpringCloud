@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>fbk.cjd.demo.cloud</groupId>
-	<artifactId>gateway-zuul</artifactId>
+	<artifactId>gateway-zuul-zipkin</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>gateway-zuul</name>
+	<name>gateway-zuul-zipkin</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
@@ -31,6 +31,10 @@
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-zuul</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-zipkin</artifactId>
 		</dependency>
 	</dependencies>
 
