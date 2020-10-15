@@ -1,0 +1,1 @@
+POST http://self:8501/actuator/bus-refresh
