@@ -2,7 +2,7 @@ server:
     port: 8401
 spring:
     application:
-        name: gateway-zuul
+        name: gateway-zuul-zipkin
     zipkin:
         base-url: http://self:9411/
 eureka:
