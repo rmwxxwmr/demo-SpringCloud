@@ -18,6 +18,7 @@
         <module>config-server-bus</module>
         <module>config-client-bus</module>
         <module>zipkin-server</module>
+        <module>config-repository</module>
     </modules>
 
 </project>

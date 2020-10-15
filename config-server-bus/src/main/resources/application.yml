@@ -7,10 +7,12 @@ spring:
         config:
             server:
                 git:
-                    uri: https://github.com/forezp/SpringcloudConfig
+                    uri: https://github.com/rmwxxwmr/demo-SpringCloud/
+                    search-paths: config-repository
                     username:
                     password:
-                    search-paths: respo
+#                    uri: https://github.com/forezp/SpringcloudConfig/
+#                    search-paths: respo
     rabbitmq:
         host: 10.1.0.1
         port: 5672
