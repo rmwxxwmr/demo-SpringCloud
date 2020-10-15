@@ -1,0 +1,16 @@
+server:
+    port: 8301
+spring:
+    application:
+        name: consumer-feign-hystrix-zipkin
+    zipkin:
+        base-url: http://self:9411/
+eureka:
+    client:
+        service-url:
+            defaultZone: http://sa:1@registry1:8001/eureka/,http://sa:1@registry2:8002/eureka/,http://sa:1@registry3:8003/eureka/
+        fetch-registry: true
+        register-with-eureka: true
+feign:
+    hystrix:
+        enabled: true

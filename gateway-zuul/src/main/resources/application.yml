@@ -12,8 +12,8 @@ eureka:
 zuul:
     routes:
         api-consumer-feign-hystrix:
-            path: /api-consumer-feign-hystrix/**
-            serviceId: consumer-feign-hystrix
+            path: /api-consumer-feign-hystrix-zipkin/**
+            serviceId: consumer-feign-hystrix-zipkin
         api-consumer-rest-ribbon:
             path: /api-consumer-rest-ribbon/**
             serviceId: consumer-rest-ribbon

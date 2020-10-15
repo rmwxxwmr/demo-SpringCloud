@@ -10,10 +10,10 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>provider-cluster</module>
+        <module>provider-sleuth-zipkin-cluster</module>
         <module>registry-cluster</module>
         <module>consumer-rest-ribbon</module>
-        <module>consumer-feign-hystrix</module>
+        <module>consumer-feign-hystrix-zipkin</module>
         <module>gateway-zuul</module>
         <module>config-server-bus</module>
         <module>config-client-bus</module>

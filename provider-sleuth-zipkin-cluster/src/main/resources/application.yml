@@ -1,0 +1,11 @@
+spring:
+    application:
+        name: provider-sleuth-zipkin-cluster
+    sleuth:
+        web:
+            client:
+                enabled: true
+        sampler:
+            probability: 1.0
+    zipkin:
+        base-url: http://self:9411/
