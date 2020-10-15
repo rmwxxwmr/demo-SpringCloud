@@ -11,8 +11,6 @@ spring:
                     search-paths: config-repository
                     username:
                     password:
-#                    uri: https://github.com/forezp/SpringcloudConfig/
-#                    search-paths: respo
     rabbitmq:
         host: 10.1.0.1
         port: 5672
