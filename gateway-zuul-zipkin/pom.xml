@@ -8,7 +8,7 @@
 		<version>2.3.4.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>fbk.cjd.demo.cloud</groupId>
+	<groupId>me.chenjd.demo.cloud</groupId>
 	<artifactId>gateway-zuul-zipkin</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>gateway-zuul-zipkin</name>

@@ -8,7 +8,7 @@
 		<version>2.3.4.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>fbk.cjd.demo.cloud</groupId>
+	<groupId>me.chenjd.demo.cloud</groupId>
 	<artifactId>provider-sleuth-zipkin-cluster</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>provider-sleuth-zipkin-cluster</name>
