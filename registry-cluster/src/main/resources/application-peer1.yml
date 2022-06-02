@@ -2,12 +2,10 @@ server:
     port: 8001
 eureka:
     instance:
-        hostname: registry1
+        hostname: cloud-registry1
     client:
-#        fetch-registry: false
-#        register-with-eureka: false
         service-url:
-            defaultZone: http://sa:1@registry2:8002/eureka/,http://sa:1@registry3:8003/eureka/
+            defaultZone: http://cloud-registry2:8002/eureka/,http://cloud-registry3:8003/eureka/
     server:
         enable-self-preservation: false
 #        eviction-interval-timer-in-ms: 5000
