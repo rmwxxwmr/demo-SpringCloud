@@ -8,7 +8,7 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: 120.48.63.249:80
+        server-addr: server:80
 
 provider-nacos-url: http://provider-nacos/provider-nacos  #服务名/上下文
 

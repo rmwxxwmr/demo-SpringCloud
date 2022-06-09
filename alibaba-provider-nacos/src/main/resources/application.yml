@@ -3,7 +3,7 @@ spring:
   cloud:
     nacos:
      discovery:
-      server-addr: 120.48.63.249:80
+      server-addr: server:80
   application:
     name: provider-nacos
 server:
