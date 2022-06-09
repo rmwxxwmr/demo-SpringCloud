@@ -10,5 +10,17 @@ spring:
       discovery:
         server-addr: server:80
 
+
 provider-nacos-url: http://provider-nacos/provider-nacos  #服务名/上下文
+
+feign:
+  client:
+    config:
+      provider-nacos:
+        logger-level: full
+        connectTimeout: 1000
+        read-timeout: 1000
+logging:
+  level:
+    me.chenjd.demo.cloud.alibaba: debug
 

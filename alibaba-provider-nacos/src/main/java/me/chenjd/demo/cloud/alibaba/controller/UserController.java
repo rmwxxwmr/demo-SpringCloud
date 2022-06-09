@@ -1,6 +1,7 @@
 package me.chenjd.demo.cloud.alibaba.controller;
 
 import me.chenjd.demo.cloud.alibaba.entity.User;
+import me.chenjd.dplatform.commons.utils.ThreadUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -30,6 +31,7 @@ public class UserController {
 
     @GetMapping
     public List<User> getList(){
+//        ThreadUtils.awaitFor(() -> false,100,5000,null);
         return USERS;
     }
 
