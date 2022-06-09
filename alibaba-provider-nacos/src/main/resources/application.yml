@@ -1,0 +1,12 @@
+
+spring:
+  cloud:
+    nacos:
+     discovery:
+      server-addr: 120.48.63.249:80
+  application:
+    name: provider-nacos
+server:
+  port: 8701
+  servlet:
+    context-path: /provider-nacos

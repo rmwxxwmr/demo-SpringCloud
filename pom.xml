@@ -19,6 +19,7 @@
         <module>config-client-bus</module>
         <module>zipkin-server</module>
         <module>config-repository</module>
+        <module>alibaba-provider-nacos</module>
     </modules>
 
 </project>

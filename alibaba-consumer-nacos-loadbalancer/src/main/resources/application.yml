@@ -1,0 +1,14 @@
+server:
+  port: 8801
+  servlet:
+    context-path: /consumer-nacos-loadbalancer
+spring:
+  application:
+    name: consumer-nacos-loadbalancer
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 120.48.63.249:80
+
+provider-nacos-url: http://provider-nacos
+
