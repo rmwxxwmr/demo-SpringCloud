@@ -1,8 +1,11 @@
 package me.chenjd.demo.cloud.alibaba.controller;
 
+import lombok.extern.slf4j.Slf4j;
 import me.chenjd.demo.cloud.alibaba.entity.User;
 import me.chenjd.dplatform.commons.utils.ReflectUtils;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.client.ServiceInstance;
+import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,12 +20,14 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("/user")
+@Slf4j
 public class UserController {
 
     @Value("${provider-nacos-url}")
     private String providerNacosUrl;
 
     private final RestTemplate restTemplate;
+
 
     public UserController(RestTemplate restTemplate) {
         this.restTemplate = restTemplate;
