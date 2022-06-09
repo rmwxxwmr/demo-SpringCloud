@@ -20,6 +20,7 @@
         <module>zipkin-server</module>
         <module>config-repository</module>
         <module>alibaba-provider-nacos</module>
+        <module>alibaba-consumer-nacos-loadbalancer-feign</module>
     </modules>
 
 </project>

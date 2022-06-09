@@ -2,10 +2,8 @@ package me.chenjd.demo.cloud.alibaba.controller;
 
 import lombok.extern.slf4j.Slf4j;
 import me.chenjd.demo.cloud.alibaba.entity.User;
-import me.chenjd.dplatform.commons.utils.ReflectUtils;
+import me.chenjd.demo.cloud.alibaba.feign.UserFeignClient;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.cloud.client.ServiceInstance;
-import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -23,25 +21,30 @@ import java.util.List;
 @Slf4j
 public class UserController {
 
-    @Value("${provider-nacos-url}")
-    private String providerNacosUrl;
+/*    @Value("${provider-nacos-url}")
+    private String providerNacosUrl;*/
 
     private final RestTemplate restTemplate;
 
+    private final UserFeignClient userFeignClient;
 
-    public UserController(RestTemplate restTemplate) {
+
+    public UserController(RestTemplate restTemplate, UserFeignClient userFeignClient) {
         this.restTemplate = restTemplate;
+        this.userFeignClient = userFeignClient;
     }
 
 
     @GetMapping
     public List<User> getList(){
-        return ReflectUtils.parse(restTemplate.getForObject(providerNacosUrl+"/user",List.class));
+//        return ReflectUtils.parse(restTemplate.getForObject(providerNacosUrl+"/user",List.class));
+        return userFeignClient.getList();
     }
 
     @GetMapping("{userId}")
     public User get(@PathVariable("userId") Integer userId){
-        return restTemplate.getForObject(providerNacosUrl+"/user/"+userId,User.class);
+//        return restTemplate.getForObject(providerNacosUrl+"/user/"+userId,User.class);
+        return userFeignClient.get(userId);
     }
 
 }

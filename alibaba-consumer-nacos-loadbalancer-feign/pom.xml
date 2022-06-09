@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>me.chenjd.demo.cloud</groupId>
-	<artifactId>alibaba-consumer-nacos-loadbalancer</artifactId>
+	<artifactId>alibaba-consumer-nacos-loadbalancer-feign</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>alibaba-consumer-nacos-loadbalancer</name>
+	<name>alibaba-consumer-nacos-loadbalancer-feign</name>
 	<properties>
 		<java.version>17</java.version>
 		<spring-cloud.version>2021.0.3</spring-cloud.version>
@@ -47,6 +47,10 @@
 			<groupId>me.chenjd.dplatform.commons</groupId>
 			<artifactId>core</artifactId>
 			<version>1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-openfeign</artifactId>
 		</dependency>
 	</dependencies>
 	<dependencyManagement>
