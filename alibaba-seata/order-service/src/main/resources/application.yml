@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: seata-order-service
+  cloud:
+    nacos:
+      discovery:
+        server-addr: server:80
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://server:3306/seata_order?allowMultiQueries=true
+    username: root
+    password: aZ*!1745hdoi
+seata:
+  tx-service-group: default_tx_group
+server:
+   port: 9201
