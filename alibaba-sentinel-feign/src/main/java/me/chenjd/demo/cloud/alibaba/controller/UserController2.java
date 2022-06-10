@@ -1,15 +1,19 @@
 package me.chenjd.demo.cloud.alibaba.controller;
 
 import com.alibaba.csp.sentinel.Entry;
+import com.alibaba.csp.sentinel.EntryType;
 import com.alibaba.csp.sentinel.SphU;
 import com.alibaba.csp.sentinel.Tracer;
 import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import com.alibaba.csp.sentinel.slots.block.BlockException;
 import com.alibaba.csp.sentinel.slots.block.RuleConstant;
+import com.alibaba.csp.sentinel.slots.block.degrade.DegradeRule;
+import com.alibaba.csp.sentinel.slots.block.degrade.DegradeRuleManager;
 import com.alibaba.csp.sentinel.slots.block.flow.FlowRule;
 import com.alibaba.csp.sentinel.slots.block.flow.FlowRuleManager;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -44,8 +48,13 @@ public class UserController2 {
     @GetMapping
     @SentinelResource(value = RESOURCE_NAME,blockHandler = "blockHandlerForUserTest",fallback = "fallbackForUserTest")
     public String userTest(){
-//        int a = 1/0;
         return "user2 normal";
+    }
+
+    @GetMapping("{userId}")
+    @SentinelResource(value = RESOURCE_NAME,entryType = EntryType.IN,blockHandler = "blockHandlerForDegrade")
+    public String userTest(@PathVariable("userId")String userId){
+        return "user2 normal:"+userId;
     }
 
     /**
@@ -72,6 +81,14 @@ public class UserController2 {
         return "user2 abnormal error";
     }
 
+    /**
+     * degrade服务降级的处理方法
+    */
+    public String blockHandlerForDegrade(String userId,BlockException ex){
+        log.error("",ex);
+        return "user2 abnormal degrade:"+userId;
+    }
+
     @PostConstruct
     private static void initFlowRules(){
         //流控规则
@@ -88,6 +105,23 @@ public class UserController2 {
         rules.add(rule);
         //加载配置好的规则
         FlowRuleManager.loadRules(rules);
+
+        //降级规则
+        List<DegradeRule> DegradeRules = new ArrayList<>();
+        //流控
+        DegradeRule degradeRule = new DegradeRule();
+        //设置受保护的资源
+        degradeRule.setResource(RESOURCE_NAME);
+        // 设置规则测率： 异常数
+        degradeRule.setGrade(RuleConstant.DEGRADE_GRADE_EXCEPTION_COUNT);
+        //设置异常数
+        degradeRule.setCount(2);
+        degradeRule.setTimeWindow(10);//10秒内发生的异常
+        degradeRule.setMinRequestAmount(2);//最小请求数
+
+        DegradeRules.add(degradeRule);
+        //加载配置好的规则
+        DegradeRuleManager.loadRules(DegradeRules);
     }
 
 }
