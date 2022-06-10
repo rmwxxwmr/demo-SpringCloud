@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  * @version 1.0
  * @date 2019/8/28 4:05 PM
  */
-@FeignClient(name = "stock-service")
+@FeignClient(name = "seata-stock-service")
 public interface StockFeignClient {
 
     @GetMapping("stock/deduct")
