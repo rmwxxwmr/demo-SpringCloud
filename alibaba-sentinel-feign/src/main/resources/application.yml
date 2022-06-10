@@ -10,6 +10,18 @@ spring:
     sentinel:
       log:
         dir: ./alibaba-sentinel-feign/logs
-      transport:
-        dashboard: server:80/sentinel-dashboard
-      eager: true
+      datasource:
+        ds1:
+           nacos:
+             server-addr: server:80
+             data-id: sentinel-feign
+             group-id: DEFAULT_GROUP
+             data-type: json
+             rule-type: flow
+#      transport:
+#        dashboard: server:9111
+#        port: 9112
+#      eager: true
+feign:
+  sentinel:
+    enabled: true
