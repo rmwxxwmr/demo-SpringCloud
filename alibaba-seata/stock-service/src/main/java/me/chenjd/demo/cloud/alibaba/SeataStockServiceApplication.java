@@ -8,7 +8,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @EnableDiscoveryClient
 @EnableFeignClients
-@SpringBootApplication(scanBasePackages = {"com.work"})
+@SpringBootApplication
 public class SeataStockServiceApplication {
 
     public static void main(String[] args) {

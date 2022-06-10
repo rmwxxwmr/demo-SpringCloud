@@ -7,7 +7,7 @@ spring:
         server-addr: server:80
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://server:3306/seata_order?allowMultiQueries=true
+    url: jdbc:mysql://server:3306/seata_stock?allowMultiQueries=true
     username: root
     password: aZ*!1745hdoi
 seata:
