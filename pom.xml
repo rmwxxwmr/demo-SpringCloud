@@ -21,6 +21,8 @@
         <module>config-repository</module>
         <module>alibaba-provider-nacos</module>
         <module>alibaba-consumer-nacos-loadbalancer-feign</module>
+        <module>alibaba-nacos-config</module>
+        <module>alibaba-sentinel-feign</module>
     </modules>
 
 </project>

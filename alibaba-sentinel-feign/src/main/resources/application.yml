@@ -1,0 +1,12 @@
+server:
+  port: 9101
+spring:
+  application:
+    name: sentinel-feign
+  cloud:
+    nacos:
+      discovery:
+        server-addr: server:80
+    sentinel:
+      log:
+        dir: ./alibaba-sentinel-feign/logs
