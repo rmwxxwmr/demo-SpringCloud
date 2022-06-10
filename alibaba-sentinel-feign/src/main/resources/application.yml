@@ -10,3 +10,6 @@ spring:
     sentinel:
       log:
         dir: ./alibaba-sentinel-feign/logs
+      transport:
+        dashboard: server:80/sentinel-dashboard
+      eager: true
