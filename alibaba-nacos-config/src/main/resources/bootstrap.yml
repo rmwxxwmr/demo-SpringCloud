@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: nacos-config
+  cloud:
+    nacos:
+      config:
+        server-addr: server:80
+        file-extension: yaml
+        context-path: /nacos
+        refresh-enabled: true
