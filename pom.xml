@@ -23,6 +23,7 @@
         <module>alibaba-consumer-nacos-loadbalancer-feign</module>
         <module>alibaba-nacos-config</module>
         <module>alibaba-sentinel-feign</module>
+        <module>alibaba-seata</module>
     </modules>
 
 </project>
