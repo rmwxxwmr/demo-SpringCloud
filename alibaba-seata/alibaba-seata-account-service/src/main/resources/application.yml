@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: seata-account-service
+  cloud:
+    nacos:
+      discovery:
+        server-addr: server:80
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://server:3306/seata_account?allowMultiQueries=true
+    username: root
+    password: aZ*!1745hdoi
+seata:
+  tx-service-group: default_tx_group
+  registry:
+    type: nacos
+    nacos:
+      server-addr: server:80
+      application: seata-server
+      group: SEATA_GROUP
+  config:
+    type: nacos
+    nacos:
+      server-addr: server:80
+  enabled: true
+server:
+  port: 9203

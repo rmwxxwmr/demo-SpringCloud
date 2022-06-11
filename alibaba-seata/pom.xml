@@ -16,8 +16,9 @@
 	<packaging>pom</packaging>
 
 	<modules>
-		<module>order-service</module>
-		<module>stock-service</module>
+		<module>alibaba-seata-order-service</module>
+		<module>alibaba-seata-account-service</module>
+		<module>alibaba-seata-stock-service</module>
 	</modules>
 
 	<properties>
