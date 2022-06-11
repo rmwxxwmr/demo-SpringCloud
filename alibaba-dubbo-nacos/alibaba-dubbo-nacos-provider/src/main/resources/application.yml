@@ -13,3 +13,6 @@ dubbo:
     base-packages: me.chenjd.demo.cloud.alibaba
   registry:
     address: nacos://server:80
+  protocol:
+    port: -1
+    name: dubbo
