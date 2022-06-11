@@ -30,7 +30,7 @@ public class OrderService {
     /**
      * 下单：创建订单、减库存，件账户金额
      */
-//    @GlobalTransactional
+    @GlobalTransactional
     @Transactional
     public void buy(Integer userId, String commodityCode, Integer count) {
         BigDecimal orderMoney = new BigDecimal(count).multiply(new BigDecimal(100));

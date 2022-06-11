@@ -1,5 +1,6 @@
 package me.chenjd.demo.cloud.alibaba.entity;
 
+import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Getter;
 import lombok.Setter;
@@ -13,6 +14,7 @@ import lombok.Setter;
 @TableName("account_tbl")
 public class Account {
 
+    @TableId
     private Integer userId;
 
     private Integer money;
