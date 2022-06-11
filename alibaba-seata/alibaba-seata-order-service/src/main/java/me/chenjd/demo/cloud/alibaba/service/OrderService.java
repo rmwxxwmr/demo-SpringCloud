@@ -28,7 +28,7 @@ public class OrderService {
     }
 
     /**
-     * 下单：创建订单、减库存，件账户金额
+     * 下单：创建订单、减库存，减账户金额
      */
     @GlobalTransactional
     @Transactional
