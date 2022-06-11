@@ -24,6 +24,7 @@
         <module>alibaba-nacos-config</module>
         <module>alibaba-sentinel-feign</module>
         <module>alibaba-seata</module>
+        <module>alibaba-gateway-nacos</module>
     </modules>
 
 </project>
