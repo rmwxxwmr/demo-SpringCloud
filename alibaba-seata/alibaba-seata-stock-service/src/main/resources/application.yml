@@ -25,3 +25,7 @@ seata:
   enabled: true
 server:
   port: 9202
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

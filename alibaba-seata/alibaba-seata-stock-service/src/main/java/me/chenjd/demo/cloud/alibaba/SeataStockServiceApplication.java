@@ -16,7 +16,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 public class SeataStockServiceApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(SeataAccountServiceApplication.class, args);
+        SpringApplication.run(SeataStockServiceApplication.class, args);
     }
 
 }
