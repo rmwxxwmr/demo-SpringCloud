@@ -5,14 +5,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 /**
- * Program Name: springcloud-nacos-seata
- * <p>
- * Description:
- * <p>
- *
- * @author zhangjianwei
- * @version 1.0
- * @date 2019/8/28 4:05 PM
+ * @author chenjd
+ * @date 2022/6/10 23:01
  */
 @FeignClient(name = "seata-stock-service")
 public interface StockFeignClient {

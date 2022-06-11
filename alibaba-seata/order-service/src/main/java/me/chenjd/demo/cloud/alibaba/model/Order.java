@@ -9,14 +9,8 @@ import lombok.experimental.Accessors;
 import java.math.BigDecimal;
 
 /**
- * Program Name: springcloud-nacos-seata
- * <p>
- * Description:
- * <p>
- *
- * @author zhangjianwei
- * @version 1.0
- * @date 2019/8/28 4:05 PM
+ * @author chenjd
+ * @date 2022/6/10 23:01
  */
 @Data
 @Accessors(chain = true)

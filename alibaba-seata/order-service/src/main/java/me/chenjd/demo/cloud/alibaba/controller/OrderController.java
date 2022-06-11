@@ -1,6 +1,5 @@
 package me.chenjd.demo.cloud.alibaba.controller;
 
-import me.chenjd.demo.cloud.alibaba.feign.StockFeignClient;
 import me.chenjd.demo.cloud.alibaba.service.OrderService;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -8,14 +7,8 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.annotation.Resource;
 
 /**
- * Program Name: springcloud-nacos-seata
- * <p>
- * Description:
- * <p>
- *
- * @author zhangjianwei
- * @version 1.0
- * @date 2019/8/28 4:05 PM
+ * @author chenjd
+ * @date 2022/6/10 23:01
  */
 @RestController
 @RequestMapping("order")
@@ -23,13 +16,9 @@ public class OrderController {
 
     @Resource
     private OrderService orderService;
-    @Resource
-    private StockFeignClient stockFeignClient;
 
     /**
      * 下单：插入订单表、扣减库存，模拟回滚
-     *
-     * @return
      */
     @RequestMapping("/placeOrder/commit")
     public Boolean placeOrderCommit() {
@@ -41,8 +30,6 @@ public class OrderController {
 
     /**
      * 下单：插入订单表、扣减库存，模拟回滚
-     *
-     * @return
      */
     @RequestMapping("/placeOrder/rollback")
     public Boolean placeOrderRollback() {

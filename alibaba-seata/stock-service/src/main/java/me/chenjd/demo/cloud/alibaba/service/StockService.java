@@ -9,14 +9,8 @@ import org.springframework.transaction.annotation.Transactional;
 import javax.annotation.Resource;
 
 /**
- * Program Name: springcloud-nacos-seata
- * <p>
- * Description:
- * <p>
- *
- * @author zhangjianwei
- * @version 1.0
- * @date 2019/8/28 4:05 PM
+ * @author chenjd
+ * @date 2022/6/10 23:01
  */
 @Service
 public class StockService {
@@ -26,9 +20,6 @@ public class StockService {
 
     /**
      * 减库存
-     *
-     * @param commodityCode
-     * @param count
      */
     @Transactional(rollbackFor = Exception.class)
     public void deduct(String commodityCode, int count) {
