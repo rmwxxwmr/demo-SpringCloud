@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: rocketmq-stream-consumer
+  cloud:
+    # Spring Cloud Stream 配置项，对应 BindingServiceProperties 类
+    stream:
+      # Binding 配置项，对应 BindingProperties Map
+      bindings:
+        topic-demo-01-input:
+          destination: topic-demo-01 # 目的地。这里使用 RocketMQ Topic
+          content-type: application/json # 内容格式。这里使用 JSON
+          group: topic-demo-01-group # 消费者分组,命名规则：组名+topic名
+
+        topic-demo-02-input:
+          destination: topic-demo-02 # 目的地。这里使用 RocketMQ Topic
+          content-type: application/json # 内容格式。这里使用 JSON
+          group: topic-demo-02-group # 消费者分组,命名规则：组名+topic名
+      # Spring Cloud Stream RocketMQ 配置项
+      rocketmq:
+        # RocketMQ Binder 配置项，对应 RocketMQBinderConfigurationProperties 类
+        binder:
+          name-server: server:9876 # RocketMQ Namesrv 地址
+          group: demo-consumer-01
+        # RocketMQ 自定义 Binding 配置项，对应 RocketMQBindingProperties Map
+#        bindings:
+#          topic-demo-01-input:
+#            # RocketMQ Consumer 配置项，对应 RocketMQConsumerProperties 类
+#            consumer:
+#              enabled: true # 是否开启消费，默认为 true
+#              broadcasting: false # 是否使用广播消费，默认为 false 使用集群消费，如果要使用广播消费值设成true。
+
+server:
+  port: 9502
