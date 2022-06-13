@@ -1,0 +1,15 @@
+spring:
+  cloud:
+    stream:
+      kafka:
+        binder:
+          auto-create-topics: true   # 自动创建topics
+          brokers: server:9092
+      bindings:
+        logP-out-0:    # 对用在ProducersConfig中的生产函数logP
+          destination: log  # logP将数据发送的topic
+          contentType: application/json
+      function:
+        definition: logP  # 指定对应的函数为Spring Cloud Stream中的生产消费通道
+server:
+  port: 9601

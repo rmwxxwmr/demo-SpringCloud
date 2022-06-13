@@ -1,0 +1,17 @@
+spring:
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers: server:9092
+      bindings:
+        logC-in-0: # 对用在ConsumersConfig中的生产函数logC
+          destination: log
+          group: log_group
+        addAgeC-in-0:
+          destination: addAge
+          group: addAge_group
+      function:
+        definition: logC;addAgeC  # 指定对应的函数为Spring Cloud Stream中的消费通道
+server:
+  port: 9602

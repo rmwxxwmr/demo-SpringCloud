@@ -27,6 +27,7 @@
         <module>alibaba-gateway-nacos</module>
         <module>alibaba-dubbo-nacos</module>
         <module>alibaba-rocketmq-stream</module>
+        <module>kafka-stream</module>
     </modules>
 
 </project>
