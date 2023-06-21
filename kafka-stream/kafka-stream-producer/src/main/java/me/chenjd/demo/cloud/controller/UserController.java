@@ -40,7 +40,10 @@ public class UserController {
         user.setUserId(1);
         user.setUserName("user test add age 1");
         user.setAge(10);
-        return streamBridge.send("addAge",user);
+        for (int i = 0; i < 10; i++) {
+            streamBridge.send("addAge",user);
+        }
+        return true;
     }
 
 }
